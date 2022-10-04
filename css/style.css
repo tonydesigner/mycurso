@@ -1,0 +1,52 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+html,body{height: 100vh;}
+
+.center{display: flex;justify-content: center;align-items: center;}
+.margin{display: flex;justify-content: space-around;align-items: center;}
+.space{display: flex;justify-content: space-between;align-items: center;}
+
+.brd{border: 1px solid;}
+
+.container{background-color:red;  height: 100%; background: linear-gradient(#6b42c1, #351d68);}
+.top{height: 415px; }
+.base{height: 201px;;}
+.base button{transition: 2s ; width: 250px; height: 40px; border-radius: .5em; background: transparent;font-size:13pt; font-weight: bold; color: #f33f69; cursor: pointer; border: 2px solid #f33f69;}
+
+.indica{display:none; animation:aparece 1s ease-out; background-color:rgba(0,0,0, .7); width:100vw; height: 100vh; position:absolute; top: 0; left: 0;}
+.indica p{text-align:center;}
+.indica button{margin: 1em 0; width: 250px; height: 40px; border-radius: .5em; background: transparent;font-size:13pt; font-weight: bold; color: #f33f69; cursor: pointer; border: 2px solid #f33f69;}
+
+.logIn{display:none; animation: aparece2 .5s ease-out; background-color:#fff; width:100vw; height: 100vh; position:absolute; top: 0; left: 0;}
+.logIn h1{text-align:center; position:absolute; top: 5em;  font-family: 'Arial';color:#f33f69;width: 100%;}
+.form{text-align:center;  height:100vh; width:100vw; padding:.8em;}
+.form button{ margin: 1em 0; width: 100%; height: 40px; border-radius: .5em; background-color:#f33f69 ;font-size:13pt; font-weight: bold; color: #fff; cursor: pointer; border: 2px solid #f33f69;}
+.email{bo width: 300px; border:1px solid #f33f69; border-radius: .5em; padding: .5em;}
+.senha{width: 300px;margin-top: 2em; border:1px solid #f33f69; border-radius: .5em; padding: .5em;}
+input{border:0;width: 100%;padding:.5em; outline: none; font-size: 13pt;}
+
+.acao{display:none;animation: surge 1s ease-out; background-color:#351d68; width:100vw; height: 100vh; position:absolute; top: 0; left: 0;}
+
+@media (max-width: 768px){
+    .container{height: 100vh; width: 100vw;}
+}
+
+@keyframes acaoBtn{
+    0%{transform: translateX() scale(1);opacity:1;}
+    50%{transform: translateX(10px) scale(2); opacity:.5}
+    100%{opacity:0;}
+}
+@keyframes aparece{
+    0%{ transform: translateX(-150px)}
+    100%{transform:translateX(0)}
+}
+
+@keyframes aparece2{
+    0%{ transform: translateX(0) scale(0);}
+    100%{transform:translateX(0) scale(1);}
+}
+
+@keyframes surge{
+    0%{ transform: translatey(-550px); opacity:0}
+    70%{opacity:0}
+    100%{transform:translatey(0);opacity:1}
+}
